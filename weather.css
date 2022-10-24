@@ -1,0 +1,77 @@
+body {
+    flex-wrap: wrap;
+    background-image: url("sky4.jpeg") ;
+
+  }
+
+  .weatherResults {
+    text-align: center;
+    border: 1px solid #87ceeb;
+    margin-left: 310;
+    margin-right: 310px;
+    height: 100%;
+    border-radius: 10px;
+
+  }
+
+  button {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 50%;
+    word-break: break-word;
+    border: 0;
+    background-image: url("sky2.jpeg");
+    font-weight: bold;
+
+  }
+  select {
+    background-color: #5E5DF0;
+    color: white;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    width: 50%;
+    background-image: url("sky4.jpeg");
+    border-radius: 999px;
+    font-size: 22px;
+    padding: 8px 18px;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #temp{
+    font-size: 30px;
+
+  }
+  #feels{
+    font-size: 30px;
+    
+  }
+  #wind{
+    font-size: 30px;
+    
+  }
+  #hum{
+    font-size: 30px;
+    
+  }
+  #cuName{
+    font-size: 30px;
+    
+  }
+  h2{
+    font-size: 39px;
+  }

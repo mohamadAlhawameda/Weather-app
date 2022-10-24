@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Mohamad Alhawameda Weather app</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Mohamad Alhawameda">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="weather.css" />
+</head>
+
+<body>
+  <div class="weatherResults">
+    <h2 id="city"> PLEASE SELECT A CITY </h2>
+    <div id="temp">
+
+    </div>
+    <br />
+    <div id="feels">
+
+    </div>
+    <br />
+    <div id="wind">
+
+    </div>
+    <br />
+    <div id="hum">
+
+    </div>
+    <br />
+    <div id="cuName">
+
+    </div>
+    <br>
+    <button type="button" onclick="MyWeahter()">
+      Update Weather
+    </button>
+    <br />
+    <br>
+    <select id="Menu" class="form-select">
+      <option value="none" selected disabled hidden>Select City:</option>
+      <option value="Dubai">Dubai</option>
+      <option value="oakville "> Oakville</option>
+      <option value="mississauga">Mississauga</option>
+      <option value="New york">New york</option>
+      <option value="Miami">Miami</option>
+    </select>
+  </div>
+  <script src="weather.js"></script>
+</body>
+
+</html>

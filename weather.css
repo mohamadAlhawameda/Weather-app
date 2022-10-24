@@ -1,6 +1,6 @@
 body {
     flex-wrap: wrap;
-    background-image: url("sky4.jpeg") ;
+    background-image: url("../sky4.jpeg") ;
 
   }
 
@@ -33,7 +33,7 @@ body {
     width: 50%;
     word-break: break-word;
     border: 0;
-    background-image: url("sky2.jpeg");
+    background-image: url("../sky2.jpeg");
     font-weight: bold;
 
   }
@@ -42,7 +42,7 @@ body {
     color: white;
     box-shadow: #5E5DF0 0 10px 20px -10px;
     width: 50%;
-    background-image: url("sky4.jpeg");
+    background-image: url("../sky4.jpeg");
     border-radius: 999px;
     font-size: 22px;
     padding: 8px 18px;

@@ -1,15 +1,111 @@
 <html>
+
 <head>
   <title>Mohamad Alhawameda Weather app</title>
   <meta charset="UTF-8">
   <meta name="author" content="Mohamad Alhawameda">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="weather.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="weather.css" /> -->
+
+  <style>
+    body {
+      flex-wrap: wrap;
+      background-color: #87CEEB;
+    }
+
+    .weatherResults {
+      text-align: center;
+      border: 5px solid #82cdeb;
+      margin-left: 310;
+      margin-right: 310px;
+      height: 100%;
+      border-radius: 10px;
+
+    }
+
+    button {
+      background: #87CEEB;
+      border-radius: 999px;
+      box-shadow: #5E5DF0 0 10px 20px -10px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+      font-size: 22px;
+      line-height: 24px;
+      opacity: 1;
+      outline: 0 solid transparent;
+      padding: 8px 18px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: 60%;
+      word-break: break-word;
+      border: 0;
+      font-weight: bold;
+
+    }
+
+    input[type=text] {
+      text-align: center;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 3px solid #27a8db;
+      border-radius: 15px;
+      box-sizing: border-box;
+      background-color: #87CEEB;
+    }
+
+    #temp {
+      font-size: 30px;
+    }
+
+    #feels {
+      font-size: 30px;
+
+    }
+
+    #wind {
+      font-size: 30px;
+
+    }
+
+    #hum {
+      font-size: 30px;
+
+    }
+
+    #cuName {
+      font-size: 30px;
+
+    }
+
+    h2 {
+      font-size: 39px;
+    }
+
+    label {
+      font-size: 30px;
+      font-weight: bold;
+
+    }
+  </style>
 </head>
 
 <body>
   <div class="weatherResults">
-    <h2 id="city"> PLEASE SELECT A CITY </h2>
+    <form>
+      <label for="men">ENTER ANY CITY</label><br />
+      <input type="text" id="men" placeholder="Enter city name here">
+    </form>
+    <br />
+    <button type="button" onclick="MyWeahter()">
+      Submit
+    </button>
+    <br />
+    <h2 id="city"> </h2>
     <div id="temp">
 
     </div>
@@ -29,22 +125,36 @@
     <div id="cuName">
 
     </div>
-    <br>
-    <button type="button" onclick="MyWeahter()">
-      Update Weather
-    </button>
-    <br />
-    <br>
-    <select id="Menu" class="form-select">
-      <option value="none" selected disabled hidden>Select City:</option>
-      <option value="Dubai">Dubai</option>
-      <option value="oakville "> Oakville</option>
-      <option value="mississauga">Mississauga</option>
-      <option value="New york">New york</option>
-      <option value="Miami">Miami</option>
-    </select>
   </div>
-  <script src="weather.js"></script>
+
+  <script>
+    function MyWeahter() {
+      let sel = document.getElementById("men").value;
+      fetch("http://api.openweathermap.org/data/2.5/weather?q=" + sel + "&units=metric&appid=86de1d4ee4dd12e3bcfe36542183215a")
+        .then(response => response.json())
+        .then(data => MyJson(data))
+        .catch(message => alert(message));;
+    }
+
+    function UsingXHR(url) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.responseType = "json";
+      xhttp.onreadystatechange = function () {
+
+      };
+      xhttp.open("GET", url, true);
+      xhttp.get();
+    }
+
+    function MyJson(json) {
+      document.getElementById("city").innerHTML = json.name;
+      document.getElementById("temp").innerHTML = "Tempature : " + json.main.temp + "°";
+      document.getElementById("feels").innerHTML = "Feels like : " + json.main.feels_like + "°";
+      document.getElementById("wind").innerHTML = "Wind speed : " + json.wind.speed;
+      document.getElementById("hum").innerHTML = "Humidity: " + json.main.humidity
+      document.getElementById("cuName").innerHTML = "Country : " + json.sys.country;
+    }
+  </script>
 </body>
 
 </html>

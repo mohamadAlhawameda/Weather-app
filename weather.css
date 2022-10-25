@@ -1,0 +1,83 @@
+body {
+    flex-wrap: wrap;
+    background-color: #87CEEB;
+  }
+
+  .weatherResults {
+    text-align: center;
+    border: 5px solid #82cdeb;
+    margin-left: 310;
+    margin-right: 310px;
+    height: 100%;
+    border-radius: 10px;
+
+  }
+
+  button {
+    background: #87CEEB;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 60%;
+    word-break: break-word;
+    border: 0;
+    font-weight: bold;
+
+  }
+
+  input[type=text] {
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #27a8db;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #87CEEB;
+  }
+
+  #temp {
+    font-size: 30px;
+  }
+
+  #feels {
+    font-size: 30px;
+
+  }
+
+  #wind {
+    font-size: 30px;
+
+  }
+
+  #hum {
+    font-size: 30px;
+
+  }
+
+  #cuName {
+    font-size: 30px;
+
+  }
+
+  h2 {
+    font-size: 39px;
+  }
+
+  label {
+    font-size: 30px;
+    font-weight: bold;
+
+  }
